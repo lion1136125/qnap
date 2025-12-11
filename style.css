@@ -428,3 +428,20 @@ body{ margin:0; background:var(--bg-page); color:var(--text-main); }
   color: #fff !important;
   border-radius: 12px;
 }
+.request-info h2 {
+  text-align: left !important;
+}
+
+.request-info .section-desc {
+  text-align: left !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.request-highlights {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
