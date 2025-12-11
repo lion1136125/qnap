@@ -1,12 +1,43 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <script type="text/javascript"> var JsHost = (("https:" == document.location.protocol) ? "https://" : "http://"); var sTime = new Date().getTime(); document.write(unescape("%3Cscript id='bslog_script' src='" + JsHost + "bs-report.lob.kr/ntrace.js?bs_id=lion113&bs_m=4168372&t=" + sTime + "' type='text/javascript'%3E%3C/script%3E")); </script>
+  <!-- 방문자 로그 스크립트 -->
+  <script type="text/javascript">
+    var JsHost = (("https:" == document.location.protocol) ? "https://" : "http://");
+    var sTime = new Date().getTime();
+    document.write(unescape(
+      "%3Cscript id='bslog_script' src='" +
+      JsHost +
+      "bs-report.lob.kr/ntrace.js?bs_id=lion113&bs_m=4168372&t=" +
+      sTime +
+      "' type='text/javascript'%3E%3C/script%3E"
+    ));
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <meta name="referrer" content="origin" />
-  <title>나스AS서버 데이터복구 센터 </title>
+  <title>나스AS서버 데이터복구 센터</title>
+
   <link rel="stylesheet" href="style.css" />
+
+  <!-- 요청하신: "수리 / 점검 접수" 바로 아래 설명 문구 붙이기용 보정 -->
+  <style>
+    .request-info h2 {
+      margin-top: 0;
+      margin-bottom: 4px; /* 제목과 설명 사이 아주 살짝만 간격 */
+    }
+
+    .request-info .section-desc {
+      margin-top: 0;      /* 위쪽 여백 제거 */
+      margin-bottom: 12px;
+    }
+
+    /* 폼 쪽도 살짝 정돈 (선택) */
+    .request-form-card .form-head {
+      margin-top: 0;
+    }
+  </style>
 </head>
 <body>
 
@@ -18,7 +49,7 @@
           <img src="lenovo-logo.jpg" alt="Lenovo 로고" class="brand-logo" />
           <div class="brand-title">나스AS서버 데이터복구 센터</div>
         </div>
-        <div class="brand-desc"> NAS / 서버 전문 수리 · 점검 </div>
+        <div class="brand-desc">NAS / 서버 전문 수리 · 점검</div>
       </div>
 
       <div class="call-box">
@@ -72,10 +103,26 @@
       </p>
 
       <div class="service-grid">
-        <div class="service-item"><div class="icon">💻</div><div class="title">부팅 불가 / 접근 불가</div><div class="desc">DSM 접속 불가, 부팅 불가, 웹콘솔 오류 등.</div></div>
-        <div class="service-item"><div class="icon">🖥️</div><div class="title">디스크 / RAID 장애</div><div class="desc">디스크 불량, RAID 분리, 볼륨 오류 등.</div></div>
-        <div class="service-item"><div class="icon">🔥</div><div class="title">데이터 복구</div><div class="desc">삭제, NAS 인식 불가, 파일 시스템 손상 복구.</div></div>
-        <div class="service-item"><div class="icon">⚡</div><div class="title">네트워크 문제</div><div class="desc">공유폴더, 권한, 클라우드 동기화 오류.</div></div>
+        <div class="service-item">
+          <div class="icon">💻</div>
+          <div class="title">부팅 불가 / 접근 불가</div>
+          <div class="desc">DSM 접속 불가, 부팅 불가, 웹콘솔 오류 등.</div>
+        </div>
+        <div class="service-item">
+          <div class="icon">🖥️</div>
+          <div class="title">디스크 / RAID 장애</div>
+          <div class="desc">디스크 불량, RAID 분리, 볼륨 오류 등.</div>
+        </div>
+        <div class="service-item">
+          <div class="icon">🔥</div>
+          <div class="title">데이터 복구</div>
+          <div class="desc">삭제, NAS 인식 불가, 파일 시스템 손상 복구.</div>
+        </div>
+        <div class="service-item">
+          <div class="icon">⚡</div>
+          <div class="title">네트워크 문제</div>
+          <div class="desc">공유폴더, 권한, 클라우드 동기화 오류.</div>
+        </div>
       </div>
     </div>
   </section>
@@ -86,7 +133,7 @@
       <div class="request-info">
         <h2>수리 / 점검 접수</h2>
         <p class="section-desc">
-          성함과 연락처만 남겨주시면 담당자가 빠르게 연락드립니다.
+          저희 센터는 QNAP공식 서비스센터와 무관하게 수리및 데이터복구 전문 업체입니다.
         </p>
 
         <ul class="request-highlights">
@@ -101,74 +148,83 @@
         </div>
       </div>
 
-<form class="request-form-card" id="serviceForm">
-  <div class="form-head">온라인 접수 / 문의</div>
+      <form class="request-form-card" id="serviceForm">
+        <div class="form-head">온라인 접수 / 문의</div>
 
-  <div class="form-group">
-    <label for="custName">성함</label>
-    <input id="custName" name="성함" type="text" required />
-  </div>
+        <div class="form-group">
+          <label for="custName">성함</label>
+          <input id="custName" name="성함" type="text" required autocomplete="name" />
+        </div>
 
-  <div class="form-group">
-    <label for="custPhone">연락처</label>
-    <input id="custPhone" name="연락처" type="tel" required />
-  </div>
+        <div class="form-group">
+          <label for="custPhone">연락처</label>
+          <input id="custPhone" name="연락처" type="tel" required autocomplete="tel" />
+        </div>
 
-  <div class="form-group">
-    <label for="custArea">지역 / 주소</label>
-    <input id="custArea" name="지역/주소" type="text" />
-  </div>
+        <div class="form-group">
+          <label for="custArea">지역 / 주소</label>
+          <input id="custArea" name="지역/주소" type="text" autocomplete="address-line1" />
+        </div>
 
-  <div class="form-group">
-    <label for="issueType">고장 증상</label>
-    <select id="issueType" name="고장 증상">
-      <option>부팅 불가 / 접근 불가</option>
-      <option>디스크 오류 / RAID 장애</option>
-      <option>데이터 복구 요청</option>
-      <option>네트워크 / 공유 폴더 문제</option>
-      <option>기타</option>
-    </select>
-  </div>
+        <div class="form-group">
+          <label for="issueType">고장 증상</label>
+          <select id="issueType" name="고장 증상">
+            <option>부팅 불가 / 접근 불가</option>
+            <option>디스크 오류 / RAID 장애</option>
+            <option>데이터 복구 요청</option>
+            <option>네트워크 / 공유 폴더 문제</option>
+            <option>기타</option>
+          </select>
+        </div>
 
-  <div class="form-group">
-    <label for="issueDetail">상세 증상</label>
-    <textarea id="issueDetail" name="상세 설명" rows="4"></textarea>
-  </div>
+        <div class="form-group">
+          <label for="issueDetail">상세 증상</label>
+          <textarea id="issueDetail" name="상세 설명" rows="4"></textarea>
+        </div>
 
-  <button type="submit" class="submit-btn">접수 요청하기</button>
+        <button type="submit" class="submit-btn">접수 요청하기</button>
 
-  <div class="form-note">
-    접수 즉시 확인 후 연락드립니다.
-  </div>
-</form>
-
+        <div class="form-note">
+          접수 즉시 확인 후 연락드립니다.
+        </div>
+      </form>
     </div>
   </section>
 
-   <footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-col footer-col-left">
-      <div class="footer-brand">Computer Service Center</div>
-      <div class="footer-line">대표번호 : <a href="tel:15446068" class="footer-tel">1544-6068</a></div>
-      <div class="footer-line">관리자 : <a href="tel:0226003666" class="footer-tel">02-2600-3666</a></div>
-      <div class="footer-line">이메일 : <a href="mailto:noteservice@outlook.kr" class="footer-tel">noteservice@outlook.kr</a></div>
-      <div class="footer-line">주소 : 687 Gasan-dong, Geumcheon-gu, Seoul</div>
-      <div class="footer-line">영업시간 : 08:00 ~ 20:00</div>
-    </div>
-    <div class="footer-col footer-col-right">
-      <div class="footer-line">사업자등록번호 : 662-07-03217 </div>
-    
-      <div class="footer-line">ⓒ Computer Service Center. All Rights Reserved.</div>
-    </div>
-  </div>
-</footer>
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-col footer-col-left">
+        <div class="footer-brand">Computer Service Center</div>
+        <div class="footer-line">
+          대표번호 :
+          <a href="tel:15446068" class="footer-tel">1544-6068</a>
+        </div>
+        <div class="footer-line">
+          관리자 :
+          <a href="tel:0226003666" class="footer-tel">02-2600-3666</a>
+        </div>
+        <div class="footer-line">
+          이메일 :
+          <a href="mailto:noteservice@outlook.kr" class="footer-tel">noteservice@outlook.kr</a>
+        </div>
+        <div class="footer-line">주소 : 687 Gasan-dong, Geumcheon-gu, Seoul</div>
+        <div class="footer-line">영업시간 : 08:00 ~ 20:00</div>
+      </div>
 
+      <div class="footer-col footer-col-right">
+        <div class="footer-line">사업자등록번호 : 662-07-03217</div>
+        <div class="footer-line">ⓒ Computer Service Center. All Rights Reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 폼 제출 완료 토스트 -->
   <div class="submit-success" id="submitSuccess">
-    접수되었습니다. 전문 엔지니어가 빠르게 연락드리겠습니다.<br>
+    접수되었습니다. 전문 엔지니어가 빠르게 연락드리겠습니다.<br />
     급하신 경우 1544-6068 로 연락 주세요.
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
