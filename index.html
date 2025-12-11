@@ -207,18 +207,21 @@
     급하신 경우 1544-6068 로 연락 주세요.
   </div>
 
-  <!-- 여기서부터: 방법 1 강제 오버라이드 -->
+  <!-- 여기서부터: request 제목/문구 정렬/한줄 오버라이드 -->
   <style>
     .request-info h2 {
       margin-top: 0 !important;
       margin-bottom: 4px !important;
-      text-align: center !important;
+      text-align: left !important;          /* 왼쪽 정렬 */
     }
 
     .request-info .section-desc {
       margin-top: 0 !important;
       margin-bottom: 12px !important;
-      text-align: center !important;
+      text-align: left !important;          /* 왼쪽 정렬 */
+      white-space: nowrap !important;       /* 한 줄만 */
+      overflow: hidden !important;          /* 넘치는 부분 숨김 */
+      text-overflow: ellipsis !important;   /* ... 처리 */
     }
   </style>
 
