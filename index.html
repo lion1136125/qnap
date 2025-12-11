@@ -20,24 +20,6 @@
   <title>나스AS서버 데이터복구 센터</title>
 
   <link rel="stylesheet" href="style.css" />
-
-  <!-- 요청하신: "수리 / 점검 접수" 바로 아래 설명 문구 붙이기용 보정 -->
-  <style>
-    .request-info h2 {
-      margin-top: 0;
-      margin-bottom: 4px; /* 제목과 설명 사이 아주 살짝만 간격 */
-    }
-
-    .request-info .section-desc {
-      margin-top: 0;      /* 위쪽 여백 제거 */
-      margin-bottom: 12px;
-    }
-
-    /* 폼 쪽도 살짝 정돈 (선택) */
-    .request-form-card .form-head {
-      margin-top: 0;
-    }
-  </style>
 </head>
 <body>
 
@@ -133,7 +115,7 @@
       <div class="request-info">
         <h2>수리 / 점검 접수</h2>
         <p class="section-desc">
-          저희 센터는 QNAP공식 서비스센터와 무관하게 수리및 데이터복구 전문 업체입니다.
+          저희 센터는 QNAP공식 서비스센터와 무관하게 수리 및 데이터복구 전문 업체입니다.
         </p>
 
         <ul class="request-highlights">
@@ -224,6 +206,21 @@
     접수되었습니다. 전문 엔지니어가 빠르게 연락드리겠습니다.<br />
     급하신 경우 1544-6068 로 연락 주세요.
   </div>
+
+  <!-- 여기서부터: 방법 1 강제 오버라이드 -->
+  <style>
+    .request-info h2 {
+      margin-top: 0 !important;
+      margin-bottom: 4px !important;
+      text-align: center !important;
+    }
+
+    .request-info .section-desc {
+      margin-top: 0 !important;
+      margin-bottom: 12px !important;
+      text-align: center !important;
+    }
+  </style>
 
   <script src="script.js"></script>
 </body>
