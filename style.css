@@ -146,10 +146,11 @@ body{ margin:0; background:var(--bg-page); color:var(--text-main); }
   white-space:nowrap;
 }
 
+/* 전화번호 버튼도 다른 버튼과 동일한 파란 버튼 + 흰색 글자 */
 .headline-call{
-  background:var(--brand-soft);
-  color:var(--brand-primary);
-  border:1px solid var(--brand-border);
+  background: var(--brand-primary);
+  color: #fff;
+  border:2px solid transparent;
 }
 
 @media (max-width:599px){
@@ -247,6 +248,7 @@ body{ margin:0; background:var(--bg-page); color:var(--text-main); }
   text-overflow:ellipsis;
 }
 
+/* 불릿 – 기본 왼쪽 정렬 */
 .request-highlights{
   list-style:none;
   padding:0;
@@ -427,21 +429,4 @@ body{ margin:0; background:var(--bg-page); color:var(--text-main); }
   background: #1677ff !important;
   color: #fff !important;
   border-radius: 12px;
-}
-.request-info h2 {
-  text-align: left !important;
-}
-
-.request-info .section-desc {
-  text-align: left !important;
-  margin-left: 0 !important;
-  padding-left: 0 !important;
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-}
-
-.request-highlights {
-  margin-left: 0 !important;
-  padding-left: 0 !important;
 }
